@@ -1,0 +1,46 @@
+
+@model francesco.priori._5h.prenota.Models.Utente;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Prenota</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<form asp-controller="Home" asp-action="Prenotato" method="post">
+  <div class="form-group">
+    <label asp-for="Nome"></label>
+    <input type="text" asp-for="Nome" class="form-control" />
+    <span asp-validation-for="Nome" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Cognome"></label>
+    <input type="text" asp-for="Cognome" class="form-control"></input>
+    <span asp-validation-for="Cognome" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Email"></label>
+    <input type="text" asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Tipo"></label>
+    <select type="text" asp-for="Tipo" class="form-control">
+      <option></option>
+      <option>Maschio</option>
+      <option>Femmina</option>
+      <option>Preferisco non specificarlo</option>
+    </select>
+    <span asp-validation-for="Tipo" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Citta"></label>
+    <input type="text" asp-for="Citta" class="form-control"></input>
+    <span asp-validation-for="Citta" />
+  </div>
+  <div class="form-group">
+    <div asp-validation-summary="All"></div>
+    <button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-send"></i> Send</button>
+  </div>
+</form>

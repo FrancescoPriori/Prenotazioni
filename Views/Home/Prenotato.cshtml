@@ -1,0 +1,12 @@
+
+@model List<Utente>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Prenotato</h1>
+    <p>Grazie mille per la sua Prenotazione @Model[0].Nome </p>
+    <p>Numero Prenotazioni @Model.Count() </p>
+    </div>
